@@ -56,7 +56,12 @@ Once Webpack has finished compilation, it will have produced a few key types of 
 
 ##### app-[contenthash].js
 
+<<<<<<< HEAD
 This is bundle produced from [production-app.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/production-app.js) which you'll mostly be discussing in this section. It is configured in [webpack entry](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/webpack.config.js#L130)
+=======
+This bundle is produced from [production-app.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/production-app.js) which will mostly be discussed in this section. It is configured in [webpack entry](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/webpack.config.js#L130)
+
+> > > > > > > 7c710942f86231a8ea122ae88425c364b3696862
 
 ##### webpack-runtime-[contenthash].js
 
@@ -105,13 +110,24 @@ One thing to note is that it gets the list of plugins from `./cache/api-runner-b
 
 ### Page Rendering
 
+<<<<<<< HEAD
 The hydration requires a new React component to "replace" the existing DOM with. Gatsby uses [reach router](https://github.com/reach/router) for this. Within it, you provide a [RouteHandler](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/production-app.js#L38) component that uses [PageRenderer](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/page-renderer.js) to create the navigated to page.
 
 PageRenderer's constructor [loads the page resources](/docs/production-app/#load-page-resources) for the path. On first load though, these will have already been requested from the server by `<link rel="preload" ... />` in the page's original HTML (see [Link Preloads](/docs/how-code-splitting-works/#construct-link-and-script-tags-for-current-page) in HTML Generation Docs). The loaded page resources includes the imported component, with which you create the actual page component using [React.createElement()](https://reactjs.org/docs/react-api.html). This element is returned to your RouteHandler which hands it off to Reach Router for rendering.
 
 ### Load Page Resources
 
-Before hydration occurs, you kick off the loading of resources in the background. As mentioned above, the current page's resources will have already been requested by `link` tags in the HTML. So, technically, there's nothing more required for this page load. But you can start loading resources required to navigate to other pages.
+# Before hydration occurs, you kick off the loading of resources in the background. As mentioned above, the current page's resources will have already been requested by `link` tags in the HTML. So, technically, there's nothing more required for this page load. But you can start loading resources required to navigate to other pages.
+
+The hydration requires a new React component to "replace" the existing DOM with. Gatsby uses [reach router](https://github.com/reach/router) for this. Within it, Gatsby provides a [RouteHandler](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/production-app.js#L38) component that uses [PageRenderer](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/page-renderer.js) to create the navigated to page.
+
+PageRenderer's constructor [loads the page resources](/docs/production-app/#load-page-resources) for the path. On first load though, these will have already been requested from the server by `<link rel="preload" ... />` in the page's original HTML (see [Link Preloads](/docs/how-code-splitting-works/#construct-link-and-script-tags-for-current-page) in HTML Generation Docs). The loaded page resources includes the imported component, with which Gatsby creates the actual page component using [React.createElement()](https://reactjs.org/docs/react-api.html). This element is returned to the RouteHandler which hands it off to Reach Router for rendering.
+
+### Load Page Resources
+
+Before hydration occurs, Gatsby kicks off the loading of resources in the background. As mentioned above, the current page's resources will have already been requested by `link` tags in the HTML. So, technically, there's nothing more required for this page load. But we can start loading resources required to navigate to other pages.
+
+> > > > > > > 7c710942f86231a8ea122ae88425c364b3696862
 
 This occurs in [loader.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/loader.js). The main function here is [getResourcesForPathname()](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/loader.js#L314). Given a path, it will find its page, and import its component module json query results. But to do this, it needs access to that information. This is provided by [async-requires.js](/docs/write-pages/#async-requiresjs) which contains the list of all pages in the site, and all their dataPaths. [fetchPageResourcesMap()](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/loader.js#L33) takes care of requesting that file, which occurs the [first time](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/loader.js#L292) `getResourcesForPathname()` is called.
 
