@@ -1245,18 +1245,18 @@
     - Technology
   built_by: Thrive
   built_by_url: "https://thriveweb.com.au/"
-- title: Evergov
-  main_url: "https://evergov.com/"
-  url: "https://evergov.com/"
+- title: Papergov
+  main_url: "https://papergov.com/"
+  url: "https://papergov.com/"
   featured: false
-  description: Finding local government services made easier.
+  description: Manage all your government services in a single place
   categories:
     - Directory
     - Government
     - Technology
   source_url: "https://github.com/WeOpenly/localgov.fyi"
-  built_by: Evergov
-  built_by_url: "https://evergov.com/about/"
+  built_by: Openly Technologies
+  built_by_url: "https://papergov.com/about/"
 - title: Kata.ai Documentation
   main_url: "https://docs.kata.ai/"
   url: "https://docs.kata.ai/"
@@ -2680,12 +2680,6 @@
   built_by: Ian Busko
   built_by_url: https://github.com/ianbusko
   featured: false
-- title: Got Milk
-  main_url: "https://www.gotmilk.com/"
-  url: "https://www.gotmilk.com/"
-  featured: false
-  categories:
-    - Food
 - title: People For Bikes
   url: "https://2017.peopleforbikes.org/"
   main_url: "https://2017.peopleforbikes.org/"
@@ -4984,14 +4978,6 @@
   categories:
     - Portfolio
     - Photography
-- title: Pantene
-  main_url: https://pantene.com
-  url: https://pantene.com
-  featured: false
-  description: >
-    Pantene is a Swiss-created American brand of hair care products owned by Procter & Gamble
-  categories:
-    - Business
 - title: Prevue
   main_url: https://www.prevue.io
   url: https://www.prevue.io
@@ -7262,19 +7248,6 @@
   built_by: Ridvan Karadag
   built_by_url: http://www.rootvan.com
   featured: false
-- title: Fifteen Seconds Istanbul
-  url: https://fifteenseconds.istanbul/
-  main_url: https://fifteenseconds.istanbul/
-  description: >
-    Landing page of FifteenSeconds Istanbul Event
-  categories:
-    - Event
-    - Conference
-    - Business
-    - Landing Page
-  built_by: İbrahim Telman
-  built_by_url: https://github.com/ibrahimtelman/
-  featured: false
 - title: spon.io
   url: https://www.spon.io
   main_url: https://www.spon.io
@@ -7434,16 +7407,6 @@
     - Law
   built_by: Merbin J Anselm
   built_by_url: https://anselm.in
-- title: Saint New York
-  url: https://www.saintnewyork.com
-  main_url: https://www.saintnewyork.com
-  description: >
-    A powerful fresh-scent formula made with clean ingredients.
-  categories:
-    - eCommerce
-    - Business
-  built_by: Peter Hironaka
-  built_by_url: https://peterhironaka.com
 - title: Runlet
   main_url: https://runlet.app
   url: https://runlet.app
@@ -8038,7 +8001,6 @@
   categories:
     - Blog
     - Portfolio
-    - Documentation
   built_by: Musthaq Ahamad
   built_by_url: "https://haxzie.com"
   featured: false
@@ -8051,6 +8013,56 @@
   categories:
     - Blog
     - Portfolio
-    - Documentation
   built_by: yangnianbing
+  featured: false
+- title: Robin Wieruch's Blog
+  url: "https://www.robinwieruch.de/"
+  main_url: "https://www.robinwieruch.de/"
+  categories:
+    - Blog
+    - Education
+  featured: false
+- title: diff001a's blog
+  main_url: https://diff001a.netlify.com/
+  url: https://diff001a.netlify.com/
+  description: >
+    This is diff001a's blog which contains blogs realted to programming.
+  categories:
+    - Blog
+  built_by: diff001a
+- title: Rockwong Blog
+  main_url: http://rockwong.com/blog/
+  url: http://rockwong.com/blog/
+  description: >
+    Rockwong is a techncal blog containing content realted to various web technologies.
+  categories:
+    - Technology
+    - Education
+    - Blog
+- title: RegexGuide
+  main_url: "https://regex.guide"
+  url: "https://regex.guide/playground"
+  source_url: "https://github.com/pacdiv/regex.guide"
+  description: >
+    The easiest way to learn regular expressions! The RegexGuide is a playground helping developers to discover regular expressions. Trying it is adopting regular expressions!
+  categories:
+    - App
+    - Education
+    - JavaScript
+    - Nonprofit
+    - Open Source
+    - Programming
+    - Technology
+    - Web Development
+  built_by: Loïc J.
+  built_by_url: https://growthnotes.dev
+- title: re:store
+  url: https://www.visitrestore.com
+  main_url: https://www.visitrestore.com
+  description: >
+    This is your chance to discover, connect, and shop beyond your feed and get to know the who, how, and why behind your favorite products.
+  categories:
+    - Marketing
+  built_by: The Couch
+  built_by_url: https://thecouch.nyc
   featured: false
